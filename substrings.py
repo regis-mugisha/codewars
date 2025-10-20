@@ -6,6 +6,6 @@ def in_array(array1, array2):
         for main_string in array2:
             if substring in main_string:
                 substring_array.append(substring)
-                break
+                break  # optimization
 
     return sorted(substring_array)
