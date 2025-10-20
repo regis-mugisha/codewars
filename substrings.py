@@ -5,7 +5,7 @@ def in_array(array1, array2):
     for substring in array1:
         for main_string in array2:
             if substring in main_string:
-                substring_array.append(substring)
-                break  # optimization
+                if substring not in substring_array:
+                    substring_array.append(substring)
 
     return sorted(substring_array)
